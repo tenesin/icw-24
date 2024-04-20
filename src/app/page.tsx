@@ -8,11 +8,11 @@ export default function Home() {
     <>
     <div className="h-screen bg-[#F5FEDF]">
 <section className="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
-    <div className="w-full h-64 lg:w-1/2 lg:h-auto">
+    <div className="w-full h-full lg:w-1/2 lg:h-auto">
         <Image src="/Assets/Logo/logo-icw.png"
       width={600}
       height={600}
-      alt="Picture of the author"
+      alt="logo icw"
       />
     </div>
     <div
@@ -21,13 +21,12 @@ export default function Home() {
         <div className="flex flex-col p-12 md:px-16">
             <h2 className="text-2xl font-semibold uppercase text-green-800 lg:text-4xl">Indonesian Corrosion Week 2024</h2>
             <p className="mt-4">
+            ICW (Indonesian Corrosion Week) 2024, is one of the events that raises the issue of corrosion. ICW is present as t the frontline to broaden the window of insight and create awareness, especially for the younger generation, about the importance of preventing corrosion. 
+
+            </p>
+            <p className="mt-4">
             ICW is an annual event of INDOCOR ITS SC which is held to provide introduction, development, and innovation of corrosion on a national scale for students and college students in Indonesia through talkshow, company visit, ICW Night, also several competitions held such as essay, poster, and corrosion handling.
             </p>
-            <div className="mt-8">
-                <a href="#"
-                    className="inline-block w-full text-center text-lg font-medium text-gray-100 bg-green-600 border-solid border-2 border-gray-600 py-4 px-10 hover:bg-green-800 hover:shadow-md md:w-48">Read
-                    More</a>
-            </div>
         </div>
     </div>
 </section>
