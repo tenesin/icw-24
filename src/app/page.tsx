@@ -8,7 +8,7 @@ export default function Home() {
     <>
     <div className="h-screen bg-[#F5FEDF]">
 <section className="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
-    <div className="w-full h-full lg:w-1/2 lg:h-auto">
+    <div className="w-full h-128 lg:w-1/2 lg:h-auto">
         <Image src="/Assets/Logo/logo-icw.png"
       width={600}
       height={600}
@@ -32,8 +32,8 @@ export default function Home() {
 </section>
 </div>
 
-<section className="text-[#fff] bg-[#6A211F] body-font">
-  <div className="container px-6 py-6 mx-auto">
+<section className="text-[#fff] h-128 bg-[#6A211F] body-font">
+  <div className="container px-6 pt-64 pb-2 sm:py-64  md:py-6 mx-auto">
    <h1 className="text-center items-center align-middle m-8 text-5xl font-semibold">Competition</h1>
     <div className="flex flex-wrap -m-4 mb-6 text-center">
       <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
