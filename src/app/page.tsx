@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@nextui-org/react";
+import { link } from "fs";
 
 const competitions = [
   {
@@ -32,8 +33,8 @@ const competitions = [
 export default function Home() {
   return (
     <>
-      <div className="h-screen bg-[#F5FEDF]">
-        <section className="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
+      <div className="min-h-screen bg-[#F5FEDF]">
+        <section className="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-3 xl:max-w-6xl">
           <div className="w-full h-128 lg:w-1/2 lg:h-auto">
             <Image 
               src="/Assets/Logo/logo-icw.png"
@@ -57,7 +58,7 @@ export default function Home() {
       </div>
 
       <section className="text-[#fff] h-128 bg-[#6A211F] body-font justify-center items-center">
-        <div className="container px-6 pt-64 pb-2 sm:py-50 md:py-6 mx-auto">
+        <div className="container px-6 pt-20 pb-2 sm:py-50 md:py-6 mx-auto">
           <h1 className="text-center items-center align-middle m-8 text-5xl font-semibold">Competition</h1>
           <div className="grid grid-cols-1 mx-auto grid-rows-4 md:grid-rows-2 md:grid-cols-2 lg:grid-rows-1 lg:grid-cols-4 -m-2 mb-6 mt-10 justify-center items-center text-center space-y-6">
             {competitions.map((competition, index) => (
@@ -80,7 +81,11 @@ export default function Home() {
                       color="success">
                         More Information
                     </Button> 
-                    <Button href={competition.infoLinkRegis} className="m-2 mt-3 border-2" color="primary">Register</Button>
+                    <Button href={competition.infoLinkRegis}
+                    as={Link}
+                    target="_blank"
+                     className="m-2 mt-3 border-2" 
+                     color="primary">Register</Button>
                   </div>
                 </div>
               </div>
