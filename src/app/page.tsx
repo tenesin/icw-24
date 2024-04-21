@@ -6,22 +6,26 @@ const competitions = [
   {
     title: "Essay for College",
     imageSrc: "/Assets/Poster/Poster-Essay-Mahasiswa.png",
-    infoLink: "https://drive.google.com/file/d/1tRexwW-sCqm2hewwcoocHnPdpoNYgbFe/view?usp=sharing",
+    infoLinkMore: "https://intip.in/KEBUTUHANPESERTAESSAYICW2024",
+    infoLinkRegis:"https://intip.in/REGISTRASIESSAYMAHASISWAICW2024"
   },
   {
     title: "Essay for Student",
     imageSrc: "/Assets/Poster/Poster-Essay-siswa.png",
-    infoLink: "https://drive.google.com/file/d/19bnUDcF-z8aJvYp0FdQMH80lN_lmrHaV/view?usp=sharing",
+    infoLinkMore: "https://intip.in/KEBUTUHANPESERTAESSAYICW2024",
+    infoLinkRegis:"https://intip.in/REGISTRASIESSAYSISWACW2024"
   },
   {
     title: "Handling Competition",
     imageSrc: "/Assets/Poster/Poster-CHC.jpg",
-    infoLink: "https://drive.google.com/file/d/1CBTI_3UaI7yr0sCJIHID7j9eMYvsfHGz/view?usp=sharing",
+    infoLinkMore: "https://intip.in/KEBUTUHANPESERTACHC2024",
+    infoLinkRegis:"https://intip.in/REGISTRASICHCICW2024"
   },
   {
     title: "Poster Competition",
     imageSrc: "/Assets/Poster/Poster-Poster-Competition.png",
-    infoLink: "https://drive.google.com/file/d/1KIc3PY0niLca5ipB6v6wdQ6hS22VOEdX/view?usp=sharing",
+    infoLinkMore: "https://intip.in/KEBUTUHANPESERTAPOSTERICW2024",
+    infoLinkRegis:"https://intip.in/REGISTRASILOMBAPOSTERMAHASISWAICW2024"
   },
 ];
 
@@ -64,19 +68,19 @@ export default function Home() {
                     width={250}
                     height={250}
                     alt="poster"
-                    className="mx-auto rounded-lg"
+                    className="mx-auto mb-6 rounded-lg border-2"
                   />
                   <h2 className="title-font font-medium mt-3 text-2xl text-[#fff]">{competition.title}</h2>
                   <div className="mt-6">
                     <Button 
-                      href={competition.infoLink}
+                      href={competition.infoLinkMore}
                       as={Link}
                       target="_blank"
                       className="m-2 border-2 mt-3" 
                       color="success">
                         More Information
                     </Button> 
-                    <Button href="/" className="m-2 mt-3 border-2" color="primary">Register</Button>
+                    <Button href={competition.infoLinkRegis} className="m-2 mt-3 border-2" color="primary">Register</Button>
                   </div>
                 </div>
               </div>
