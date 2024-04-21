@@ -58,25 +58,25 @@ export default function Home() {
           <div className="grid grid-cols-1 mx-auto grid-rows-4 md:grid-rows-2 md:grid-cols-2 lg:grid-rows-1 lg:grid-cols-4 -m-2 mb-6 mt-10 justify-center items-center text-center space-y-6">
             {competitions.map((competition, index) => (
               <div key={index} className="md:w-80 sm:w-1/2 w-128">
-                <div className="border-2 border-[#fff] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                <div className="  px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
                   <Image 
                     src={competition.imageSrc}
-                    width={200}
-                    height={200}
+                    width={250}
+                    height={250}
                     alt="poster"
-                    className="mx-auto"
+                    className="mx-auto rounded-lg"
                   />
-                  <h2 className="title-font font-medium mt-3 text-3xl text-[#fff]">{competition.title}</h2>
+                  <h2 className="title-font font-medium mt-3 text-2xl text-[#fff]">{competition.title}</h2>
                   <div className="mt-6">
                     <Button 
                       href={competition.infoLink}
                       as={Link}
                       target="_blank"
-                      className="m-2 mt-3" 
+                      className="m-2 border-2 mt-3" 
                       color="success">
                         More Information
                     </Button> 
-                    <Button href="/" className="m-2 mt-3" color="primary">Register</Button>
+                    <Button href="/" className="m-2 mt-3 border-2" color="primary">Register</Button>
                   </div>
                 </div>
               </div>
