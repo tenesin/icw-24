@@ -7,15 +7,20 @@ export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Home",
-    "Competition",
-    "Talk show",
-    "Company Visit",
-    "ICW Night",
+    { name: "Home", 
+      href: "/" },
+    { name: "Competition", 
+      href: "/competition" },
+    { name: "Talk Show", 
+      href: "/comingsoon" }, 
+    { name: "Company Visit", 
+      href: "/comingsoon" }, 
+    { name: "ICW Night", 
+     href: "/comingsoon" }, 
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar  isBlurred={true} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -35,27 +40,27 @@ export default function NavBar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/competition">
             Competition
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/comingsoon">
             Talk Show
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/comingsoon">
             Company Visit
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/comingsoon">
             ICW Night
           </Link>
         </NavbarItem>
@@ -63,7 +68,7 @@ export default function NavBar() {
       <NavbarContent justify="end">
 
         <NavbarItem>
-          <Button as={Link} color="danger" href="https://wa.me/+6281232113695" target="_blank" variant="flat">
+          <Button as={Link} color="danger" href="https://wa.me/+6285790747035" target="_blank" variant="flat">
             Contact
           </Button>
         </NavbarItem>
@@ -73,13 +78,13 @@ export default function NavBar() {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+                index === 1 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
               }
               className="w-full"
-              href="#"
+              href={item.href}
               size="lg"
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
