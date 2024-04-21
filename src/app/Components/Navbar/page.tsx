@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
-
+import Image from "next/image";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -23,7 +23,13 @@ export default function NavBar() {
         />
         <NavbarBrand>
           
-          <p className="font-bold text-inherit">ICW 2024</p>
+        <Image 
+                    src="/Assets/Logo/logo-icw.png"
+                    width={50}
+                    height={50}
+                    alt="poster"
+                    
+                  />
         </NavbarBrand>
       </NavbarContent>
 

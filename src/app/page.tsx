@@ -10,7 +10,7 @@ const competitions = [
   },
   {
     title: "Essay for Student",
-    imageSrc: "/Assets/Poster/Poster-Essay-Siswa.png",
+    imageSrc: "/Assets/Poster/Poster-Essay-siswa.png",
     infoLink: "https://drive.google.com/file/d/19bnUDcF-z8aJvYp0FdQMH80lN_lmrHaV/view?usp=sharing",
   },
   {
@@ -55,14 +55,14 @@ export default function Home() {
       <section className="text-[#fff] h-128 bg-[#6A211F] body-font justify-center items-center">
         <div className="container px-6 pt-64 pb-2 sm:py-50 md:py-6 mx-auto">
           <h1 className="text-center items-center align-middle m-8 text-5xl font-semibold">Competition</h1>
-          <div className="grid grid-cols-1 grid-rows-4 md:grid-rows-2 md:grid-cols-2 lg:grid-rows-1 lg:grid-cols-4 -m-4 mb-6 mt-10 justify-center items-center text-center space-y-6">
+          <div className="grid grid-cols-1 mx-auto grid-rows-4 md:grid-rows-2 md:grid-cols-2 lg:grid-rows-1 lg:grid-cols-4 -m-2 mb-6 mt-10 justify-center items-center text-center space-y-6">
             {competitions.map((competition, index) => (
-              <div key={index} className="md:w-80 sm:w-1/2 w-full">
+              <div key={index} className="md:w-80 sm:w-1/2 w-128">
                 <div className="border-2 border-[#fff] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
                   <Image 
                     src={competition.imageSrc}
-                    width={250}
-                    height={250}
+                    width={200}
+                    height={200}
                     alt="poster"
                     className="mx-auto"
                   />
